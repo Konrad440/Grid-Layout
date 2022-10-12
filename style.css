@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 1fr 300px;
+    grid-template-rows: 300px 50px 1fr 50px;
+    grid-template-areas: 
+    "baner baner"
+    "menu menu"
+    "blog column"
+    "stopka stopka";
+    max-width: 1200px;
+    font-size: 40px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+    
+}
+
+header {
+    grid-area: baner;
+    background-color: olivedrab;
+}
+nav {
+    grid-area: menu;
+    background-color: black;
+}
+main {
+    grid-area: blog;
+    background-color: teal;
+}
+aside {
+    grid-area: column;
+    background-color: violet;
+}
+footer {
+    grid-area: stopka;
+    background-color: skyblue;
+}
+
+@media (max-width:1024px){
+    body {
+        display: grid;
+        min-height: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 300px 3fr 1fr 50px;
+        grid-template-areas: 
+        "menu"
+        "baner"
+        "blog"
+        "column"
+        "stopka";
+        
+        
+    }
+}
